@@ -1,0 +1,76 @@
+:root {
+    --bg: #161a1d;
+    --color-text: #cbf3f0;
+    --transparent: transparent;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+}
+
+* {
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    cursor: none;
+}
+
+/* Navigation menu */
+.wrapper {
+    background: var(--bg);
+}
+
+nav ul {
+    list-style: none;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li {
+    padding: 32px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li .logo {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+nav ul li img {
+    padding-left: 15px;
+    width: 35px;
+    height: auto;
+}
+
+nav ul li a {
+    color: var(--color-text);
+    font-size: 1em;
+    text-decoration: none;
+}
+/* End of navigation menu part */
+
+/* Cursor part */
+.cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--transparent);
+    border: 2px solid #eee;
+    left: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width 500ms, height 500ms;
+}
+
+.cursor.large {
+    height: 70px;
+    width: 70px;
+}
+/* End of Cursor part */
