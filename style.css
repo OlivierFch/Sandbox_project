@@ -19,7 +19,12 @@
 
 /* Navigation menu */
 .wrapper {
-    background: var(--bg);
+    /* background: var(--bg); */
+    height: calc(100vh - 99px);
+
+    background-color: brown;
+    display: flex;
+    justify-content: flex-end;
 }
 
 nav ul {
@@ -53,6 +58,41 @@ nav ul li a {
     font-size: 1em;
     text-decoration: none;
 }
+
+/* MENU DESKTOP */
+.sidebar {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+}
+
+.menu-Desktop {
+    /* display: none; */
+    height: 100%;
+    width: 300px;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.menu-Desktop ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.menu-Desktop ul li {
+    padding: 15px;
+}
+
+
 /* End of navigation menu part */
 
 /* Cursor part */
