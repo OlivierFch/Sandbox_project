@@ -20,7 +20,7 @@
 /* Navigation menu */
 .wrapper {
     /* background: var(--bg); */
-    height: calc(100vh - 99px);
+    height: calc(100vh - 90px);
 
     background-color: brown;
     display: flex;
@@ -36,7 +36,7 @@ nav ul {
 }
 
 nav ul li {
-    padding: 32px;
+    padding: 30px;
     display: flex;
     align-items: center;
 }
@@ -49,7 +49,7 @@ nav ul li .logo {
 
 nav ul li img {
     padding-left: 15px;
-    width: 35px;
+    width: 30px;
     height: auto;
 }
 
@@ -62,18 +62,19 @@ nav ul li a {
 /* MENU DESKTOP */
 .sidebar {
     height: 100%;
-    width: 50%;
+    width: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 .menu-Desktop {
     /* display: none; */
     height: 100%;
-    width: 300px;
-    background-color: aqua;
+    width: 450px;
+    background-color: var(--transparent);
+    /* background-color: aqua; */
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -83,13 +84,28 @@ nav ul li a {
 .menu-Desktop ul {
     list-style: none;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
 }
 
 .menu-Desktop ul li {
-    padding: 15px;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    padding: 40px;
+}
+
+.menu-Desktop ul li a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+
+.menu-Desktop ul li a:hover {
+    letter-spacing: 16px;
 }
 
 
