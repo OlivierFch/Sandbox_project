@@ -18,22 +18,38 @@
     cursor: none;
 }
 
-/* Navigation menu */
-.wrapper {
-    /* background: var(--bg); */
-    height: calc(100vh - 90px);
-
-    background-color: brown;
-    display: flex;
-    justify-content: flex-end;
+/* Cursor part */
+.cursor {
+    position: fixed;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--transparent);
+    border: 2px solid var(--cursor);
+    left: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width 500ms, height 500ms;
 }
 
+.cursor.large {
+    height: 70px;
+    width: 70px;
+}
+/* End of Cursor part */
+
+/* Navigation menu */
 nav ul {
     list-style: none;
     height: inherit;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    position: fixed;
+    z-index: 3;
 }
 
 nav ul li {
@@ -68,8 +84,9 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     /* background-color: blue; */
-
+    
     position: fixed;
+    z-index: 1;
     top: 90px;
     right: 0;
     transform: translateX(100%);
@@ -89,7 +106,7 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-
+    
 }
 
 .menu-Desktop ul {
@@ -122,22 +139,25 @@ nav ul li a {
 
 /* End of navigation menu part */
 
-/* Cursor part */
-.cursor {
-    position: fixed;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--transparent);
-    border: 2px solid var(--cursor);
-    left: 0;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    transition: width 500ms, height 500ms;
+/* CONTENT PAGES */
+.section-container {
+    display: flex;
+    flex-direction: column;
 }
 
-.cursor.large {
-    height: 70px;
-    width: 70px;
+.section {
+    height: 100vh;
 }
-/* End of Cursor part */
+
+/* Homepage part */
+#container-homepage {
+    background-color: black;
+}
+/* End of homapage */
+
+/* Second page part */
+#container-secondpage {
+    background-color: brown;
+}
+/* End of second page */
+/* END OF CONTENT PAGES */

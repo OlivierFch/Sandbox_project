@@ -9,8 +9,8 @@ const linksMenu = document.querySelectorAll(".menu-Desktop ul li a");
 
 // CURSOR PART
 document.addEventListener("mousemove", (e) => {
-    let leftPosition = e.pageX + 4;
-    let topPosition = e.pageY + 4;
+    let leftPosition = e.clientX + 4;
+    let topPosition = e.clientY + 4;
 
     myCursor.style.left = leftPosition + "px";
     myCursor.style.top = topPosition + "px";
