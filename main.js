@@ -1,6 +1,9 @@
 const myCursor = document.querySelector(".cursor");
-const menuBurger = document.querySelector(".menu-burger");
 const logo = document.querySelector(".logo");
+
+const sidebar = document.querySelector(".sidebar");
+const sidebarToggle = document.querySelector(".menu-burger");
+
 
 const linksMenu = document.querySelectorAll(".menu-Desktop ul li a");
 
@@ -26,7 +29,7 @@ linksMenu.forEach(link => {
 logo.addEventListener("mouseenter", () => {
     myCursor.classList.add("large");
 })
-menuBurger.addEventListener("mouseenter", () => {
+sidebarToggle.addEventListener("mouseenter", () => {
     myCursor.classList.add("large");
 })
 
@@ -43,14 +46,14 @@ linksMenu.forEach(link => {
 logo.addEventListener("mouseleave", () => {
     myCursor.classList.remove("large");
 })
-menuBurger.addEventListener("mouseleave", () => {
+sidebarToggle.addEventListener("mouseleave", () => {
     myCursor.classList.remove("large");
 })
 // END OF CURSOR
 
 // MENU PART
-menuBurger.addEventListener("click", () => {
-    menuBurger.classList.toggle("menu");
+sidebarToggle.addEventListener("click", () => {
+    sidebar.classList.toggle("show");
 })
 
 // END OF MENU
