@@ -1,5 +1,6 @@
 :root {
     --bg: #161a1d;
+    --cursor: #eee;
     --color-text: #cbf3f0;
     --transparent: transparent;
 }
@@ -128,7 +129,7 @@ nav ul li a {
     height: 40px;
     border-radius: 50%;
     background-color: var(--transparent);
-    border: 2px solid #eee;
+    border: 2px solid var(--cursor);
     left: 0;
     transform: translate(-50%, -50%);
     pointer-events: none;
