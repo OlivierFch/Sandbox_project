@@ -117,6 +117,7 @@ nav ul li a, nav ul li p {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    background-color: var(--transparent);
 }
 
 .menu-Desktop ul li {
@@ -125,12 +126,14 @@ nav ul li a, nav ul li p {
     text-transform: uppercase;
     letter-spacing: 8px;
     padding: 40px;
+    background-color: var(--transparent);
 }
 
 .menu-Desktop ul li a {
     color: var(--color-text);
     text-decoration: none;
-    transition: all 0.5s;
+    transition: letter-spacing 0.5s;
+    background-color: var(--transparent);
 }
 
 

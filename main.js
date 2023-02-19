@@ -5,6 +5,10 @@ const sidebarToggle = document.querySelector(".menu-burger");
 const linksMenu = document.querySelectorAll(".menu-Desktop ul li a");
 const topPage = document.querySelector("#topPage");
 
+const homeSelector = document.getElementById("homeSelector");
+const workSelector = document.getElementById("workSelector");
+const aboutSelector = document.getElementById("aboutSelector");
+
 
 // CURSOR PART
 document.addEventListener("mousemove", (e) => {
@@ -47,6 +51,32 @@ linksMenu.forEach(link => {
     link.addEventListener("mouseleave", () => {
         myCursor.classList.remove("large");
     })
+})
+
+
+// MENU SELECTORS HOVER
+homeSelector.addEventListener('mouseover', () => {
+    sidebar.style.backgroundColor = "#24451d";
+    sidebar.style.transition = "all 0.5s ease";
+})
+homeSelector.addEventListener('mouseleave', () => {
+    sidebar.style.backgroundColor = "#161a1d";
+})
+
+workSelector.addEventListener('mouseover', () => {
+    sidebar.style.backgroundColor = "#452efc";
+    sidebar.style.transition = "all 0.5s ease";
+})
+workSelector.addEventListener('mouseleave', () => {
+    sidebar.style.backgroundColor = "#161a1d";
+})
+
+aboutSelector.addEventListener('mouseover', () => {
+    sidebar.style.backgroundColor = "#a45e21";
+    sidebar.style.transition = "all 0.5s ease";
+})
+aboutSelector.addEventListener('mouseleave', () => {
+    sidebar.style.backgroundColor = "#161a1d";
 })
 
 
