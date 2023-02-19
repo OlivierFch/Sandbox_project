@@ -56,7 +56,7 @@ linksMenu.forEach(link => {
 
 // MENU SELECTORS HOVER
 homeSelector.addEventListener('mouseover', () => {
-    sidebar.style.backgroundColor = "#24451d";
+    sidebar.style.backgroundColor = "#36af4c";
     sidebar.style.transition = "all 0.5s ease";
 })
 homeSelector.addEventListener('mouseleave', () => {
