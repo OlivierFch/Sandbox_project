@@ -1,11 +1,10 @@
 const myCursor = document.querySelector(".cursor");
 const logo = document.querySelector(".logo");
-
 const sidebar = document.querySelector(".sidebar");
 const sidebarToggle = document.querySelector(".menu-burger");
-
-
 const linksMenu = document.querySelectorAll(".menu-Desktop ul li a");
+const topPage = document.querySelector("#topPage");
+
 
 // CURSOR PART
 document.addEventListener("mousemove", (e) => {
@@ -16,44 +15,51 @@ document.addEventListener("mousemove", (e) => {
     myCursor.style.top = topPosition + "px";
 })
 
-// links.forEach(link => {
-//     link.addEventListener("mouseenter", () => {
-//         myCursor.classList.add("large");
-//     })
-// })
-linksMenu.forEach(link => {
-    link.addEventListener("mouseenter", () => {
-        myCursor.classList.add("large");
-    })
-})
+
+
+// LOGO PART
 logo.addEventListener("mouseenter", () => {
     myCursor.classList.add("large");
 })
-sidebarToggle.addEventListener("mouseenter", () => {
-    myCursor.classList.add("large");
-})
-
-// links.forEach(link => {
-//     link.addEventListener("mouseleave", () => {
-//         myCursor.classList.remove("large");
-//     })
-// })
-linksMenu.forEach(link => {
-        link.addEventListener("mouseleave", () => {
-            myCursor.classList.remove("large");
-        })
-    })
 logo.addEventListener("mouseleave", () => {
     myCursor.classList.remove("large");
 })
-sidebarToggle.addEventListener("mouseleave", () => {
-    myCursor.classList.remove("large");
-})
-// END OF CURSOR
+
+
 
 // MENU PART
 sidebarToggle.addEventListener("click", () => {
     sidebar.classList.toggle("show");
 })
+sidebarToggle.addEventListener("mouseenter", () => {
+    myCursor.classList.add("large");
+})
+sidebarToggle.addEventListener("mouseleave", () => {
+    myCursor.classList.remove("large");
+})
 
-// END OF MENU
+linksMenu.forEach(link => {
+    link.addEventListener("mouseenter", () => {
+        myCursor.classList.add("large");
+    })
+})
+linksMenu.forEach(link => {
+    link.addEventListener("mouseleave", () => {
+        myCursor.classList.remove("large");
+    })
+})
+
+
+// TOP PAGE
+topPage.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+})
+topPage.addEventListener("mouseenter", () => {
+    myCursor.classList.add("large");
+})
+topPage.addEventListener("mouseleave", () => {
+    myCursor.classList.remove("large");
+})

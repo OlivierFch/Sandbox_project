@@ -15,6 +15,7 @@
     margin: 0;
     padding: 0;
     background: var(--bg);
+    
     cursor: none;
 }
 
@@ -37,7 +38,7 @@
     height: 70px;
     width: 70px;
 }
-/* End of Cursor part */
+
 
 /* Navigation menu */
 nav ul {
@@ -152,12 +153,47 @@ nav ul li a {
 /* Homepage part */
 #container-homepage {
     background-color: black;
+
 }
-/* End of homapage */
 
 /* Second page part */
 #container-secondpage {
     background-color: brown;
 }
-/* End of second page */
+
+/* Toppage button part */
+#topPage {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 55px;
+    height: 55px;
+    background-color: var(--transparent);
+    border: 4px dashed var(--cursor);
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#topPage:hover {
+    animation: rotation 1.5s ease;
+}
+
+#topPage img {
+    background: center;
+    width: 30px;
+    height: 30px;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
 /* END OF CONTENT PAGES */
